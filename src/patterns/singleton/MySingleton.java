@@ -11,7 +11,7 @@ public class MySingleton {
     private static MySingleton instance = null;
 
     //make singleton protected so you can only start an instance from the getInstance method
-    protected MySingleton(){};
+    protected MySingleton(){}
 
     public static MySingleton getInstance(){
         //create only an instance if there is none
