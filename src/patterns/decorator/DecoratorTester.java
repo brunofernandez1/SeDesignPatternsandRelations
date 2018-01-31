@@ -23,7 +23,7 @@ public class DecoratorTester {
         andSalami.eat();
 
         //now create a burger with the same decorators
-        BurgerConcreteComp burgerWithKetchupandSalami = new BurgerConcreteComp("salambburger", 20);
+        BurgerConcreteComp burgerWithKetchupandSalami = new BurgerConcreteComp("salamibburger", 20);
         KetchupConcreteDecorator ketchup = new KetchupConcreteDecorator(burgerWithKetchupandSalami);
         SalamiConcreteDecorator salami = new SalamiConcreteDecorator(ketchup);
 
