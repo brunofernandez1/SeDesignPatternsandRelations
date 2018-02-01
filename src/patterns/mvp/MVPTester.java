@@ -6,14 +6,14 @@ public class MVPTester {
 
     public static void main(String[] args) {
 
+        PersonModel model = createUser();
+        PersonView view = new PersonView();
 
-        JFrame mainFrame = new JFrame("MVP JFRAME");
-        mainFrame.setSize(500, 500);
-        mainFrame.setVisible(true);
-
-
+        PersonController controller = new PersonController(model, view);
     }
 
-
-
+    public static PersonModel createUser(){
+        PersonModel customModel = new PersonModel("Bruno",28);
+        return customModel;
+    }
 }
