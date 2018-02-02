@@ -2,6 +2,7 @@ package patterns.state;
 
 /**
  * Created by Bruno on 02.02.2018.
+ * one state that inherits from state interface
  */
 public class StateStart implements StateInterf {
 
