@@ -11,7 +11,7 @@ public class MySingleton {
     private static MySingleton instance = null;
 
     //make singleton protected so you can only start an instance from the getInstance method
-    protected MySingleton(){}
+    private MySingleton(){}
 
     public static MySingleton getInstance(){
         //create only an instance if there is none
@@ -26,6 +26,10 @@ public class MySingleton {
             System.out.println("there is already an instance. Here it is");
             return instance;
         }
+    }
+
+    public void add(){
+        System.out.println("wurde geadded");
     }
 
 }

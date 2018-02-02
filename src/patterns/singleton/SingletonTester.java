@@ -10,6 +10,6 @@ public class SingletonTester {
         MySingleton.getInstance();
 
         //sout should return the existing instance
-        MySingleton.getInstance();
+        MySingleton.getInstance().add();
     }
 }

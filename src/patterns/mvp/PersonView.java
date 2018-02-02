@@ -17,6 +17,7 @@ public class PersonView  {
 
 
         JButton button = new JButton("this is a button");
+        //button.addActionListener(e -> );
         JPanel rightPanel = new JPanel();
         rightPanel.add(button);
 

@@ -1,9 +1,12 @@
 package patterns.mvp;
 
+import java.util.Observable;
+import java.util.Observer;
+
 /**
  * Created by Bruno on 01.02.2018.
  */
-public class PersonController {
+public class PersonController implements Observer {
     PersonModel model;
     PersonView view;
 
@@ -30,5 +33,10 @@ public class PersonController {
 
     public void updatePersonView(){
         view.updateView();
+    }
+
+    @Override
+    public void update(Observable o, Object arg) {
+
     }
 }
