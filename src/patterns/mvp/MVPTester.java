@@ -10,6 +10,7 @@ public class MVPTester {
         PersonView view = new PersonView();
 
         PersonController controller = new PersonController(model, view);
+        view.addController(controller);
     }
 
     public static PersonModel createUser(){

@@ -1,12 +1,14 @@
 package patterns.mvp;
 
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.util.Observable;
 import java.util.Observer;
 
 /**
  * Created by Bruno on 01.02.2018.
  */
-public class PersonController implements Observer {
+public class PersonController implements ActionListener {
     PersonModel model;
     PersonView view;
 
@@ -35,8 +37,9 @@ public class PersonController implements Observer {
         view.updateView();
     }
 
-    @Override
-    public void update(Observable o, Object arg) {
 
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        System.out.println("say yeah on controller");
     }
 }

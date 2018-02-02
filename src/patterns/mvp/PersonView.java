@@ -1,11 +1,14 @@
 package patterns.mvp;
 
 import javax.swing.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
-public class PersonView  {
+public class PersonView {
 
     JFrame mainFrame;
     JTextField textField;
+    PersonController controller;
 
     public PersonView(){
 
@@ -17,7 +20,7 @@ public class PersonView  {
 
 
         JButton button = new JButton("this is a button");
-        //button.addActionListener(e -> );
+        button.addActionListener(e -> controller.actionPerformed(e));
         JPanel rightPanel = new JPanel();
         rightPanel.add(button);
 
@@ -35,5 +38,10 @@ public class PersonView  {
     public void updateView(){
         textField.setText("Person was updated");
     }
+
+    public void addController(PersonController controller){
+        this.controller = controller;
+    }
+
 
 }
